@@ -14,6 +14,8 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -87,7 +89,7 @@ public class clienteController {
         session.setAttribute("admin", admin);
         return "redirect:/admin.html";
     } else {
-        return "redirect:/login.html?error=true";
+         return "Usuario o contraseña incorrectos";
     }
         
         

@@ -139,5 +139,11 @@ public class citaController {
         
         return reserva;
     }
-        
+    
+     @GetMapping("/citas/reserva/traer")
+     public List<ReservaDTO> mostrarCitasPendientes(){
+         return reseserv.mostrarReservas();
+     }
+    
+    
 }
